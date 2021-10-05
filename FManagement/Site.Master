@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FManagement.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="CSS/myStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        body,div,p,ul,li {
+    padding:0px;
+    margin:4px;
+    background-color:azure;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <header> <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Image/Untitled design.gif" />
+            </header>
+        </div>
+        <div class="warper">
+            <div class="Menu">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/home1.png" PostBackUrl="~/default.aspx" CausesValidation="false" />
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/object.png" PostBackUrl="~/ObjectDSCRUD.aspx" CausesValidation="false" />
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/sql.png" PostBackUrl="~/SQLDSCRUD.aspx" CausesValidation="false" />
+                <asp:ImageButton ID="ImageButton4" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/entity.png" PostBackUrl="~/EntityModelCRUD.aspx" CausesValidation="false" />
+                <asp:ImageButton ID="ImageButton6" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/report1.png" PostBackUrl="~/report.aspx" CausesValidation="false" OnClick="ImageButton6_Click" />
+                <asp:ImageButton ID="btnListView" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/listview.png" PostBackUrl="~/listview.aspx" CausesValidation="false" OnClick="ImageButton7_Click" />
+                <asp:ImageButton ID="ImageButton5" runat="server" Height="30px" Width="100" ImageUrl="~/App_Image/logout.png" OnClick="ImageButton5_Click" CausesValidation="false" />
+            </div>
+        </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
